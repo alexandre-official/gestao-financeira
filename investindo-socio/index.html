@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulando porcentagem entre Dono e sócio</h1>
+    <!--valor investido-->
+    <article id="investindo">
+        <!--investimento do dono-->
+        <section class="entrada">
+            <label for="dono-investiu-id">Dono investiu quanto</label>
+            <input type="number" name="dono-investiu" id="dono-investiu-id" placeholder="Ex: R$ 2500">
+            <!--icone minimizar-->
+            <div class="minimizar"></div>
+            <!--icone para informar-->
+            <div class="icone-info">?</div>
+        </section>
+        <!--aporte OU investimento do socio-->
+        <section class="entrada" id="section-aporte">
+            <h1>Aportes</h1>
+            <section id="section-socios">
+                <!--caso tenha novos socios-->
+            </section>
+            <!--icone para informar-->
+            <div class="icone-info">?</div>
+            <input type="button" value="Adicionar sócios">
+        </section>
+    </article>
+    <p></p>
+    <input type="button" value="Simular investimento">
+    <!--Retorno em anos-->
+    <article id="roe">
+        <section class="entrada">
+            <div class="minimizar"></div>
+            <label for="retorno-anos-id">Retorno em anos</label>
+            <input type="number" name="retorno-anos" id="retorno-anos-id" placeholder="Ex: 5 anos" value="1">
+            <div class="icone-info">?</div>
+        </section>
+        <!--Respostas-->
+        <section class="saida retorno">
+                <h1></h1>
+                <p></p>
+                <p></p>
+                <p></p>
+        </section>
+    </article>
+    <!--Botao-->
+    <input type="button" value="Simular retorno">
+    <script src="programa.js" defer></script>
+    <!--<script src="vendendo.js" defer></script>-->
+</body>
+</html>

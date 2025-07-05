@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/*
+div:not(#novo) {
+  background-color: red;
+}*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    position: relative;
+}
+h1 {
+    text-align: center;
+}
+section.entrada, section.saida {
+    width: 350px;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #6262D1;
+    color: white;
+    box-shadow: 2px 2px 1px #444444;
+    position: relative;
+}
+section.entrada h1 {
+    margin: 0;
+}
+section.entrada label, section.entrada input[type=number] {
+    display: block;
+    margin: 4px auto;
+    text-align: center;
+}
+#section-aporte div.socios {
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #00000079;
+    width: 340px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 2px solid;
+}
+#section-aporte div.socios h1 {
+    margin: 5px;
+    text-align: center;
+}
+section.entrada input[type="button"] {
+    background-color: #6262D1;
+    border-color: white;
+    color: white;
+    margin: 10px auto;
+}
+section.entrada input[type="button"]:hover {
+    background-color: white;
+    color: #6262D1;
+}
+section.entrada input[type="button"]:active {
+    background-color: #6262D1;
+    border-color: white;
+    color: white;
+}
+section.saida {
+    text-align: center;
+}
+section.saida h1 {
+    font-size: 22px;
+    margin: 4px auto;
+}
+section.saida h2 {
+    font-size: 18px;
+    margin: 4px auto;
+    font-weight: normal;
+}
+section.saida p {
+    margin: 4px auto;
+}
+section#saida-investimento div {
+    display: inline-block;
+    margin: 0 8px;
+    text-align: center;
+}
+input[type="button"] {
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 30px;
+    background-color: white;
+    border: 1.5px solid #6262D1;
+    color: #6262D1;
+    font-weight: bold;
+}
+input[type="button"]:hover {
+    background-color: #6262D1;
+    color: white;
+}
+input[type="button"]:active {
+    background-color: white;
+    border-color: #6262D1;
+    color:#6262D1;
+}
+/*adicionando informacao*/
+div.icone-info {
+    display: block;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+div.icone-info:hover {
+    background-color: white;
+    color: #6262D1;
+}
+div#informacao {
+    display: block;
+    width: 250px;
+    background-color: white;
+    border: 3px solid blueviolet;
+    right: 261px;
+    top: -11px;
+    position: relative;
+    z-index: 1;
+    padding: 2px;
+    box-shadow: 2px 2px 3px black;
+}
+div#informacao h1 {
+    color: white;
+    background-color: blueviolet;
+    margin: 0;
+    padding: 6px;
+}
+div#informacao p {
+    color: rgb(41, 0, 78);
+    padding: 0 2px;
+    font-size: 17px;
+}
+/*avisos*/
+div#aviso {
+    display: block;
+    width: 320px;
+    padding: 2px 5px;
+    background-color: white;
+    text-align: center;
+    margin: 10px auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: 2px 2px 2px #00000059;
+    border: 3px solid black;
+}
+div#aviso p:first-child{
+    background-color: blueviolet;
+    text-align: justify;
+    display: block;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    margin: -4px -7px 5px -7px;
+    padding: 5px;
+}
+div#aviso h1 {
+    font-size: 21px;
+}
+div#aviso h1, div#aviso p {
+    color: blueviolet;
+    margin: 5px 5px;
+}
+div#aviso input[type="button"] {
+    border-color: blueviolet;
+    color: blueviolet;
+    margin: 5px auto;
+}
+div#aviso input[type="button"]:hover {
+    background-color: blueviolet;
+    color: white;
+}
+div#aviso input[type="button"]:active {
+    background-color: white;
+    color: blueviolet;
+}
+div.minimizar {
+    position: absolute;
+    padding: 7px;
+    box-shadow: 1.7px -1.7px 0 0.8px #fff inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(135deg);
+    top: 6px;
+    right: 8px;
+}
+div.minimizar:hover {
+    box-shadow: 1.5px -1.5px 0 0.8px blueviolet inset;
+}
+div.minimizar:active {
+    box-shadow: 1.5px -1.5px 0 0.8px white inset;
+}
