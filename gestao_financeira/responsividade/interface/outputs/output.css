@@ -1,0 +1,43 @@
+@charset "UTF-8";
+article#bloco-de-resposta {
+    background-color: rgb(221, 221, 221);
+    background-color: white;
+    border: 3px solid var(--cor-base);
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 85%;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px var(--sombra-clara);
+}
+article#bloco-de-resposta h1 {
+    font-size: 28px;
+    margin: 5px;
+    color: var(--cor-contraste);
+}
+article#bloco-de-resposta h2 {
+    font-size: 25px;
+    font-size: 20px;
+    margin: 5px;
+    color: var(--cor-contraste);
+}
+article#bloco-de-resposta p {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--cor-base);
+}
+article#bloco-de-resposta div {
+    width: fit-content;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+article#bloco-de-resposta input {
+    display: block;
+    margin: 20px auto 5px auto;
+    width: 100px;
+    height: 30px;
+}

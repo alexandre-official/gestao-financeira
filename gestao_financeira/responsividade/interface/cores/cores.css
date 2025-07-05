@@ -1,0 +1,9 @@
+@charset "UTF-8";
+:root {
+    --cor-contraste: indigo;
+    --cor-base: blueviolet;
+    --cor-fundo: white;
+    --sombra-clara: #c0c0c0;
+    --sombra-media: #7c7c7c;
+    --sombra-escura: #3b3b3b;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--
+DICAS DO BING
+Crie um README.md explicando o propósito do projeto, instruções de uso e estrutura de pastas.
+
+Agrupe funções relacionadas em módulos (ex: calculo.js, interface.js).
+
+BOAS PRATICAS
+Use nomes descritivos para variáveis, funções e arquivos.
+Evite trechos de código duplicado — se repetir, vira função.
+
+SEPARACAO DE RESPONSABILIDADE
+HTML: Só estrutura e semântica.
+
+CSS: Visual e responsividade, organizando por componentes reutilizáveis.
+
+JavaScript: Manipulação de dados e interatividade, com funções bem nomeadas e modulares.
+
+
+Exemplo: ao clicar em “Calcular”, exiba uma mensagem de carregamento ou resultado animado.
+
+FEEDBACK IMEDIATO
+Use efeitos visuais ou mensagens para mostrar que algo foi clicado ou processado.
+
+Adicione efeitos com :hover e transition no CSS para destacar botões, ícones e links.
+transition: all 0.3s ease;
+
+3. Dicas contextuais
+Como você já começou com os ícones de interrogação, é legal expandir para que eles mostrem tooltips ou pop-ups com explicações breves, de forma responsiva.
+
+-->
+<!-- GRAFICO
+ Adicionar gráficos à sua calculadora é uma ótima ideia para tornar os resultados mais visuais e intuitivos! Aqui vai um passo a passo prático com dicas de bibliotecas e estrutura:
+
+📦 1. Escolha da biblioteca
+A mais popular e fácil de integrar é o Chart.js — leve, responsiva e com visual bonito. Você também pode explorar outras como ApexCharts, Plotly ou D3.js (essa última é mais poderosa, mas complexa).
+
+🛠️ 2. Como usar Chart.js
+📌 Passo 1: Adicione o script no seu HTML
+Você pode incluir direto do CDN:
+
+html
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+📌 Passo 2: Crie um <canvas> no HTML onde o gráfico aparecerá
+html
+<canvas id="grafico-juros" width="400" height="200"></canvas>
+📌 Passo 3: No JavaScript, configure os dados
+javascript
+const ctx = document.getElementById('grafico-juros').getContext('2d');
+const grafico = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4'],
+        datasets: [{
+            label: 'Evolução do investimento',
+            data: [1000, 1050, 1102.5, 1157.6], // Exemplos
+            backgroundColor: 'rgba(138, 43, 226, 0.2)',
+            borderColor: 'blueviolet',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3 // deixa a linha suave
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top'
+            }
+        }
+    }
+});
+Você pode alimentar esse array data com os resultados mensais calculados na função de juros compostos!
+
+🧠 Dica extra
+Use um botão do tipo “Mostrar gráfico” ou exiba o gráfico automaticamente após o cálculo. E se quiser, também dá para exportar o gráfico como imagem com .toBase64Image() do Chart.js!!
+
+Se quiser, posso adaptar o seu juros_compostos.js com código pronto para gerar o gráfico com base nos dados inseridos. Topa? 🎨📈
+
+
+
+Para integrar o gráfico com a lógica da sua calculadora de juros compostos, você vai querer que o gráfico seja gerado assim que o usuário clicar em “Calcular” e os resultados forem computados. Aqui está um guia passo a passo:
+
+🧮 1. Cálculo dos juros compostos
+Crie uma função que retorne um array com os saldos acumulados a cada mês:
+
+javascript
+function calcularJurosCompostos(principal, taxa, meses) {
+    let saldos = [];
+    let valorAtual = principal;
+
+    for (let i = 0; i <= meses; i++) {
+        saldos.push(valorAtual.toFixed(2));
+        valorAtual *= (1 + taxa / 100);
+    }
+
+    return saldos;
+}
+📊 2. Gerar o gráfico com os dados calculados
+Após o cálculo, chame a função para exibir o gráfico:
+
+javascript
+function gerarGrafico(dados) {
+    const ctx = document.getElementById('grafico-juros').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dados.map((_, i) => `Mês ${i}`),
+            datasets: [{
+                label: 'Evolução do Investimento',
+                data: dados,
+                borderColor: 'blueviolet',
+                fill: true,
+                backgroundColor: 'rgba(138, 43, 226, 0.1)',
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' }
+            }
+        }
+    });
+}
+🧷 3. Unindo tudo no botão "Calcular"
+Você pode ligar esses dois trechos a um evento onclick:
+
+javascript
+function calcular() {
+    const principal = parseFloat(document.getElementById('investimento-inicial-id').value);
+    const taxa = parseFloat(document.getElementById('juros-id').value);
+    const meses = 12; // por exemplo
+
+    if (isNaN(principal) || isNaN(taxa)) {
+        alert("Preencha todos os campos corretamente!");
+        return;
+    }
+
+    const dados = calcularJurosCompostos(principal, taxa, meses);
+    gerarGrafico(dados);
+}
+E associe essa função ao botão:
+
+html
+<input type="button" value="Calcular" onclick="calcular()">
+🧼 Dica bônus: limpar gráfico antigo
+Antes de criar um novo gráfico, apague o anterior para evitar sobreposições:
+
+javascript
+if (window.graficoJuros) {
+    window.graficoJuros.destroy();
+}
+window.graficoJuros = new Chart(ctx, { ... });
+Se quiser, posso montar esse código todo adaptado com base no seu projeto e até sugerir melhorias visuais no gráfico. Quer que eu prepare? 😄📈
+-->
+<body>
+    <main>
+        <a href="../calculos_de/investimento/investimento.html">
+            <h1>Investimento</h1>
+            <div class="icone-informacao">?</div>
+        </a>
+        <a href="../calculos_de/juros_compostos/juros_compostos.html">
+            <h1>Juros compostos</h1>
+            <div class="icone-informacao">?</div>
+        </a>
+        <a href="">
+            <h1>Calcule valor</h1>
+            <div class="icone-informacao">?</div>
+        </a>
+    </main>
+    <p>calcular quanto custa pra construir academia</p>
+    <script src="pagina_principal.js"></script>
+</body>
+</html>
