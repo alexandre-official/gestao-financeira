@@ -1,0 +1,14 @@
+@charset "UTF-8";
+:root {
+    --azul-claro: cornflowerblue;
+    --azul-medio: lightskyblue;
+    --azul-escuro: steelblue;
+    --ver-claro: springgreen;
+    --sombra-clara: #cacaca;
+    --sombra-media: #a1a1a1;
+    --sombra-escura: #7e7e7e;
+    --contraste-medio: #19588b;
+    --contraste-escuro: #0a406d;
+    --preto: black;
+    --branco: white;
+}

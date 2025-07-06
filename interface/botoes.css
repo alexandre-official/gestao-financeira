@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.botao {
+    padding: 3px 12px;
+    width: fit-content;
+    border: 2.3px solid var(--azul-claro);
+    font-weight: bold;
+    margin: 0px auto 5px auto;
+    background: var(--azul-claro);
+    color: var(--branco);
+}
+.botao:hover {
+    background: var(--branco);
+    color: var(--azul-claro);
+}
+.botao:active {
+    background: var(--azul-claro);
+    color: var(--branco);
+}
+.botao-escuro {
+    border-color: var(--azul-escuro);
+    background: var(--azul-escuro);
+}
+.botao-escuro:hover {
+    color: var(--azul-escuro);
+}
+.botao-escuro:active {
+    background: var(--azul-escuro);
+    color: var(--branco);
+}

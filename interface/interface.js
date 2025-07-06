@@ -10,6 +10,18 @@ function addErro(t) {
     bloco_de_erro.appendChild(p)
     function addBotao() {
         const input = window.document.createElement('input')
+        input.type = 'button'
+        input.value = 'Entendi'
+        input.classList.add('botao')
+        input.classList.add('botao-escuro')
+        bloco_de_erro.appendChild(input)
+        function addEventoBotao() {
+            input.addEventListener('click', removerBotao)
+        }
+        addEventoBotao()
+        function removerBotao() {
+            window.document.body.removeChild(bloco_de_erro)
+        }
     }
     addBotao()
 }
@@ -23,5 +35,4 @@ function criarP(s) {
     p.innerHTML = s
     return p
 }
-addErro('Adicione um valor!')
-addErro("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eum consectetur deleniti soluta dolores, ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit! Exercitationem saepe neque laboreLorem ipsum dolor sit amet consectetur adipisicing elit Numquam eum consecte")
+addErro("Adicione um valor!")

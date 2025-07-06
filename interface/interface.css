@@ -1,17 +1,4 @@
 @charset "UTF-8";
-:root {
-    --azul-claro: cornflowerblue;
-    --azul-medio: lightskyblue;
-    --azul-escuro: steelblue;
-    --ver-claro: springgreen;
-    --sombra-clara: #cacaca;
-    --sombra-media: #a1a1a1;
-    --sombra-escura: #7e7e7e;
-    --contraste-medio: #19588b;
-    --contraste-escuro: #0a406d;
-    --preto: black;
-    --branco: white;
-}
 * {
     margin: 0;
     padding: 0;
@@ -33,11 +20,11 @@ div.bloco-de-erro {
     transform: translateX(-50%);
     padding: 5px;
     display: flex;
-    gap: 6px;
+    gap: 10px;
     flex-direction: column;
 }
 div.bloco-de-erro h1 {
-    background-color: var(--azul-claro);
+    background-color: var(--azul-escuro);
     margin: -5px;
     border: 3px solid var(--preto);
     border-top: 0;
