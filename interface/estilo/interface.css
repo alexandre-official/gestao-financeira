@@ -28,4 +28,40 @@ div.bloco-de-erro p {
     color: var(--contraste-escuro);
     font-size: 18px;
 }
+/*ENTRADA DE DADOS*/
+div.entrada-de-dados {
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    padding: 7px 2px;
+    gap: 10px;
+    color: var(--azul-claro);
+    font-weight: bold;
+    border: 3px solid var(--azul-claro);
+    margin: 7px auto;
+}
+div.entrada-de-dados input {
+    width: 75%;
+    padding: 2px;
+    border: 2.5px solid var(--azul-claro);
+    text-align: center;
+    color: var(--azul-claro);
+    font-weight: bold;
+    font-size: 15.4px;
+}
+div.entrada-de-dados input:focus {
+    border-color: var(--azul-claro);
+    outline: 0 solid red;
+}
+/*ENTRADA DE DADOS FIM*/
 /*FIM ERRO*/
+footer {
+    bottom: 10px;
+    background: red;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

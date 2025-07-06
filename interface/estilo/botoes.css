@@ -55,4 +55,20 @@
 .pasta a:active {
     color: var(--branco);
 }
-a.botao-link {}
+.botao-link {
+    text-decoration: none;
+    background-color: var(--azul-claro);
+    padding: 5px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--branco);
+    border: 3.2px solid var(--azul-claro);
+}
+.botao-link:hover {
+    background: var(--branco);
+    color: var(--azul-claro);
+}
+.botao-link:active {
+    background-color: var(--azul-claro);
+    color: var(--branco);
+}
