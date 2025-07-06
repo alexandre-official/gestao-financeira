@@ -12,3 +12,11 @@
     --preto: black;
     --branco: white;
 }
+:root {
+    --font-principal: Arial, Helvetica, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-principal);
+}

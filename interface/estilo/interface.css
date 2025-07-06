@@ -1,14 +1,9 @@
-@charset "UTF-8";
-* {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-principal);
-}
-:root {
-    --font-principal: Arial, Helvetica, sans-serif;
+body {
+    padding: 5px;
 }
 /*ERRO*/
 div.bloco-de-erro {
+    margin-top: 10px;
     background-color: var(--branco);
     width: 270px;
     box-shadow: 2px 2px 2px var(--sombra-clara);

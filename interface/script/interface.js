@@ -35,4 +35,3 @@ function criarP(s) {
     p.innerHTML = s
     return p
 }
-addErro("Adicione um valor!")
