@@ -1,0 +1,29 @@
+.pastas {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+.pasta {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--branco);
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 5px solid var(--azul-claro);
+    box-shadow: 2px 2px 3px var(--sombra-clara);
+}
+.pasta:active {
+    background-color: var(--azul-claro);
+}
+.pasta a {
+    text-decoration: none;
+    color: var(--azul-claro);
+    font-size: 20px;
+    font-weight: bold;
+}
+.pasta a:active {
+    color: var(--branco);
+}

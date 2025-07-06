@@ -30,7 +30,7 @@ div.bloco-de-erro p {
 }
 /*ENTRADA DE DADOS*/
 div.entrada-de-dados {
-    background-color: var(--branco);
+    background-color: var(--azul-claro);
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -38,15 +38,15 @@ div.entrada-de-dados {
     align-items: center;
     padding: 7px 2px;
     gap: 10px;
-    color: var(--azul-claro);
+    color: var(--branco);
     font-weight: bold;
-    border: 3px solid var(--azul-claro);
     margin: 7px auto;
+    box-shadow: 2px 2px 3px var(--sombra-clara);
 }
 div.entrada-de-dados input {
-    width: 75%;
+    width: 65%;
     padding: 2px;
-    border: 2.5px solid var(--azul-claro);
+    border: 0.5px solid var(--azul-claro);
     text-align: center;
     color: var(--azul-claro);
     font-weight: bold;
