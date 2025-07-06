@@ -1,4 +1,52 @@
+@charset "UTF-8";
+:root {
+    --azul-claro: cornflowerblue;
+    --azul-medio: lightskyblue;
+    --azul-escuro: steelblue;
+    --ver-claro: springgreen;
+    --sombra-clara: #cacaca;
+    --sombra-media: #a1a1a1;
+    --sombra-escura: #7e7e7e;
+    --contraste-medio: #19588b;
+    --contraste-escuro: #04345c;
+    --preto: black;
+    --branco: white;
+}
 * {
     margin: 0;
     padding: 0;
+    font-family: var(--font-principal);
 }
+:root {
+    --font-principal: Arial, Helvetica, sans-serif;
+}
+/*ERRO*/
+div.bloco-de-erro {
+    background-color: var(--branco);
+    width: 270px;
+    box-shadow: 2px 2px 2px var(--sombra-clara);
+    border: 3px solid var(--preto);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+div.bloco-de-erro h1 {
+    background-color: var(--azul-claro);
+    margin: -5px;
+    border: 3px solid var(--preto);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    color: var(--branco);
+}
+div.bloco-de-erro p {
+    color: var(--contraste-escuro);
+    font-size: 18px;
+}
+/*FIM ERRO*/
