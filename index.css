@@ -2,10 +2,10 @@
     display: flex;
     gap: 12px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .pasta {
     display: flex;
-    flex-wrap: wrap;
     background-color: var(--branco);
     width: 150px;
     height: 150px;
