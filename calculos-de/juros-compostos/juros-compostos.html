@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../interface/estilo/estilo-geral.css">
     <link rel="stylesheet" href="../../interface/estilo/botoes.css">
     <link rel="stylesheet" href="../../interface/estilo/interface.css">
+    <link rel="stylesheet" href="juros-compostos.css">
 </head>
 <body>
     <div class="entrada-de-dados">
@@ -15,13 +16,27 @@
         <input type="number" name="valor-investido" id="valor-investido-id" placeholder="R$ 2000">
     </div>
     <div class="entrada-de-dados">
-        <label for="juros-id">Juros</label>
+        <div>
+            <label for="juros-id">Juros por</label>
+            <select name="juros-AMD" id="juros-AMD-id">
+                <option value="ano">ano</option>
+                <option value="mes">mes</option>
+                <option value="dia">dia</option>
+            </select>
+        </div>
         <input type="number" name="juros" id="juros-id" placeholder="Ex: 3.5%">
     </div>
+    <div class="entrada-de-dados">
+        <label for="tempo-investido-id">Tempo investido</label>
+        <input type="number" name="tempo-investido" id="tempo-investido-id" placeholder="Ex: 6 meses">
+    </div>
+    <input type="button" value="Calcular" class="botao">
+    <p></p>
     <footer>
-        <a href="../../index.html" class="botao-link">Home</a>
+        <a href="../../index.html" class="botao">Home</a>
     </footer>
     <script src="../../interface/script/interface.js"></script> 
     <script src="../../interface/script/interface.js"></script>
+    <script src="juros-compostos.js"></script>
 </body>
 </html>

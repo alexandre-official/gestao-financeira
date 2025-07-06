@@ -1,0 +1,12 @@
+select {
+    background: var(--azul-claro);
+    border: 2.3px solid var(--branco);
+    color: var(--branco);
+    font-size: 17px;
+}
+select:focus {
+    outline-color: transparent;
+}
+option {
+    background-color: var(--azul-claro);
+}

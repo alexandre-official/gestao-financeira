@@ -7,6 +7,9 @@
     margin: 0px auto 5px auto;
     background: var(--azul-claro);
     color: var(--branco);
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
 }
 .botao:hover {
     background: var(--branco);
@@ -25,22 +28,5 @@
 }
 .botao-escuro:active {
     background: var(--azul-escuro);
-    color: var(--branco);
-}
-.botao-link {
-    text-decoration: none;
-    background-color: var(--azul-claro);
-    padding: 5px 8px;
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--branco);
-    border: 3.2px solid var(--azul-claro);
-}
-.botao-link:hover {
-    background: var(--branco);
-    color: var(--azul-claro);
-}
-.botao-link:active {
-    background-color: var(--azul-claro);
     color: var(--branco);
 }

@@ -60,7 +60,6 @@ div.entrada-de-dados input:focus {
 /*FIM ERRO*/
 footer {
     bottom: 10px;
-    background: red;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
