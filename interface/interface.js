@@ -8,6 +8,10 @@ function addErro(t) {
     //p
     const p = criarP(t)
     bloco_de_erro.appendChild(p)
+    function addBotao() {
+        const input = window.document.createElement('input')
+    }
+    addBotao()
 }
 function criarH1(s) {
     const h1 = window.document.createElement('h1')
@@ -20,4 +24,4 @@ function criarP(s) {
     return p
 }
 addErro('Adicione um valor!')
-addErro("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eum consectetur deleniti soluta dolores, ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit! Exercitationem saepe neque laboreLorem ipsum dolor sit amet consectetur adipisicing elit Numquam eum consectetur deleniti soluta dolores ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit Exercitationem saepe neque laboreLorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eum consectetur deleniti soluta dolores, ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit! Exercitationem saepe neque laboreorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eum consectetur deleniti soluta dolores, ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit! Exercitationem saepe neque labore.orem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eum consectetur deleniti soluta dolores, ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit! Exercitationem saepe neque labore")
+addErro("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam eum consectetur deleniti soluta dolores, ipsam repellat accusamus. Ratione officia tempore voluptate quasi fugit eos cupiditate reprehenderit! Exercitationem saepe neque laboreLorem ipsum dolor sit amet consectetur adipisicing elit Numquam eum consecte")
