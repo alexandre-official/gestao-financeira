@@ -10,6 +10,7 @@ function addErro(t) {
     bloco_de_erro.appendChild(p)
     function addBotao() {
         const input = window.document.createElement('input')
+        
     }
     addBotao()
 }
