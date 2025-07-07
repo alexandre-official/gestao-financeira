@@ -28,6 +28,7 @@ div.bloco-de-erro p {
     color: var(--contraste-escuro);
     font-size: 18px;
 }
+/*FIM ERRO*/
 /*ENTRADA DE DADOS*/
 div.entrada-de-dados {
     background-color: var(--azul-claro);
@@ -64,4 +65,40 @@ footer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+#bloco-de-resposta {
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    padding: 7px;
+    padding-bottom: 40px;
+    position: fixed;
+    top: 0;
+    margin-top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    border: 2.5px solid var(--azul-claro);
+    box-shadow: 2px 2px 3px var(--sombra-clara);
+}
+#bloco-de-resposta h1 {
+    font-size: 25px;
+}
+#bloco-de-resposta h2 {
+    font-size: 20px;
+}
+#bloco-de-resposta p {
+    font-size: 17px;
+}
+#bloco-de-resposta div {
+    background-color: blue;
+    padding: 5px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+#bloco-de-resposta input {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(50%);
+    right: 50%;
 }

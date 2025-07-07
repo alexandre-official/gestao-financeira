@@ -16,6 +16,22 @@ function processarDados() {
         }
     }
     function calcular() {
-        p.innerHTML = 'Calculando...'
+        addBlocoDeResposta()
+        function addResposta() {
+            addH1('Texto alternativo Aleatorio')
+            addH2('Texto alternativo Aleatorio')
+            addP('Texto alternativo Aleatorio')
+            addDiv(
+                addH2('Texto alternativo', 'divCall'),
+                addH2('Texto Aleatorio', 'divCall'),
+                addP('Texto Aleatorio', 'divCall')
+            )
+            addDiv(
+                addH2('Texto Aleatorio', 'divCall'),
+                addH2('Texto Aleatorio', 'divCall'),
+                addP('Texto Aleatorio', 'divCall')
+            )
+        }
+        addResposta()
     }
 }

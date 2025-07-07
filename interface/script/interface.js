@@ -40,9 +40,50 @@ function addErro(t) {
     }
     addBotao()
 }
+const bloco_de_resposta = window.document.createElement('div')
+bloco_de_resposta.id = 'bloco-de-resposta'
 function addBlocoDeResposta() {
-    const bloco_de_resposta = window.document.createElement('div')
-    bloco_de_resposta.id = 'bloco-de-resposta'
     window.document.body.appendChild(bloco_de_resposta)
+    function addBotaoRemover() {
+        const input = window.document.createElement('input')
+        input.type = 'button'
+        input.value = 'Remover'
+        input.classList.add('botao')
+        bloco_de_resposta.appendChild(input)
+    }
+    addBotaoRemover()
 }
-addBlocoDeResposta()
+function addDiv(...a) {
+    const div = window.document.createElement('div')
+    bloco_de_resposta.appendChild(div)
+    a.forEach(element => {
+        div.appendChild(element)
+    })
+}
+function addH1(t, call) {
+    const h1 = window.document.createElement('h1')
+    h1.innerHTML = t
+    if(call === 'divCall') {
+        return h1
+    } else {
+        bloco_de_resposta.appendChild(h1)
+    }
+}
+function addH2(t, call) {
+    const h2 = window.document.createElement('h2')
+    h2.innerHTML = t
+    if(call === 'divCall') {
+        return h2
+    } else {
+        bloco_de_resposta.appendChild(h2)
+    }
+}
+function addP(t, call) {
+    const p = window.document.createElement('p')
+    p.innerHTML = t
+    if(call === 'divCall') {
+        return p
+    } else {
+        bloco_de_resposta.appendChild(p)
+    }
+}
