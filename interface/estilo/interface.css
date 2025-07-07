@@ -44,7 +44,7 @@ div.entrada-de-dados {
     box-shadow: 2px 2px 3px var(--sombra-clara);
 }
 div.entrada-de-dados input {
-    width: 60%;
+    width: 70%;
     padding: 2px;
     border: 0.5px solid var(--azul-claro);
     text-align: center;

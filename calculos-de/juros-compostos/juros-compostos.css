@@ -10,3 +10,8 @@ select:focus {
 option {
     background-color: var(--azul-claro);
 }
+#div-tempo-investido {
+    background: red;
+    display: flex;
+    width: 70%;
+}
