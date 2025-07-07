@@ -40,18 +40,29 @@ function addErro(t) {
     }
     addBotao()
 }
-const bloco_de_resposta = window.document.createElement('div')
-bloco_de_resposta.id = 'bloco-de-resposta'
+let bloco_de_resposta
+let bloco_usado = false
 function addBlocoDeResposta() {
-    window.document.body.appendChild(bloco_de_resposta)
-    function addBotaoRemover() {
-        const input = window.document.createElement('input')
-        input.type = 'button'
-        input.value = 'Remover'
-        input.classList.add('botao')
-        bloco_de_resposta.appendChild(input)
+    if(bloco_usado == false) {
+        bloco_usado = true
+        const div = window.document.createElement('div')
+        div.id = 'bloco-de-resposta'
+        window.document.body.appendChild(div)
+        bloco_de_resposta = div
+        function addBotaoRemover() {
+            const input = window.document.createElement('input')
+            input.type = 'button'
+            input.value = 'Remover'
+            input.classList.add('botao')
+            div.appendChild(input)
+            input.addEventListener('click', removerBloco)
+            function removerBloco() {
+                window.document.body.removeChild(div)
+                bloco_usado = false
+            }
+        }
+        addBotaoRemover()
     }
-    addBotaoRemover()
 }
 function addDiv(...a) {
     const div = window.document.createElement('div')

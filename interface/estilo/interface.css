@@ -81,16 +81,15 @@ footer {
     box-shadow: 2px 2px 3px var(--sombra-clara);
 }
 #bloco-de-resposta h1 {
-    font-size: 25px;
+    font-size: 21px;
 }
 #bloco-de-resposta h2 {
-    font-size: 20px;
+    font-size: 19px;
 }
 #bloco-de-resposta p {
     font-size: 17px;
 }
 #bloco-de-resposta div {
-    background-color: blue;
     padding: 5px;
     display: inline-block;
     margin: 5px;
