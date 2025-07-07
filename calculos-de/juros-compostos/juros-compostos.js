@@ -31,6 +31,7 @@ function processarDados() {
                 addH2('Texto Aleatorio', 'divCall'),
                 addP('Texto Aleatorio', 'divCall')
             )
+            addP('Paragrafo teste')
             addDiv(
                 addH2('Porcentagem', 'divCall'),
                 addP('50%', 'divCall')
