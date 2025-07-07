@@ -3,6 +3,7 @@ select {
     border: 2.3px solid var(--branco);
     color: var(--branco);
     font-size: 17px;
+    border-radius: 0;
 }
 select:focus {
     outline-color: transparent;
@@ -11,7 +12,6 @@ option {
     background-color: var(--azul-claro);
 }
 #div-tempo-investido {
-    background: red;
     display: flex;
     width: 70%;
 }
