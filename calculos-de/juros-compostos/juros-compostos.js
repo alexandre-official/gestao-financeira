@@ -15,7 +15,11 @@ function processarDados() {
             }
         }
     }
-    function calcular() {
+    function calcular() {/*
+        let patrimonio
+        let juros
+        p.innerHTML = 'a'
+        */
         addBlocoDeResposta()
         function addResposta() {
             addH1('Texto alternativo Aleatorio')
