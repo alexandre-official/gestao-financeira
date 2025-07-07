@@ -18,9 +18,9 @@
     <div class="entrada-de-dados">
         <div>
             <label for="juros-id">Juros por</label>
-            <select name="juros-AMD" id="juros-AMD-id">
+            <select name="juros-ano-mes-dia" id="juros-ano-mes-dia-id">
                 <option value="ano">ano</option>
-                <option value="mes">mes</option>
+                <option value="mes">mês</option>
                 <option value="dia">dia</option>
             </select>
         </div>
@@ -28,7 +28,14 @@
     </div>
     <div class="entrada-de-dados">
         <label for="tempo-investido-id">Tempo investido</label>
-        <input type="number" name="tempo-investido" id="tempo-investido-id" placeholder="Ex: 6 meses">
+        <div>
+            <input type="number" name="tempo-investido" id="tempo-investido-id" placeholder="Ex: 6 meses">
+            <select name="tempo-investido-ano-mes-dia" id="tempo-investido-ano-mes-dia-id">
+                <option value="ano">anos</option>
+                <option value="mes">meses</option>
+                <option value="dia">dias</option>
+            </select>
+        </div>
     </div>
     <input type="button" value="Calcular" class="botao">
     <p></p>

@@ -6,12 +6,16 @@ function processarDados() {
 
     const juros = window.document.querySelector('input#juros-id')
 
+    const tempo_investido = window.document.querySelector('input#tempo-investido-id')
+
     if(verificarInputNum(valor_investido, 'Adicione o valor investido!')) {
         if(verificarInputNum(juros, 'Coloque a porcentagem de juros!')) {
-            calcular()
+            if(verificarInputNum(tempo_investido, 'Adicione o tempo investido!')) {
+                calcular()
+            }
         }
     }
     function calcular() {
+        p.innerHTML = 'Calculando...'
     }
-    const juros_AMD = window.document.querySelector('#juros-AMD-id')
 }

@@ -1,6 +1,6 @@
 function verificarInputNum(n, t) {
-    if((n.value)) {
-        if((n.value) > 0) {
+    if(Number(n.value)) {
+        if(Number(n.value) > 0) {
             return true
         } else {
             addErro('Números negátivos não são aceitos!')
