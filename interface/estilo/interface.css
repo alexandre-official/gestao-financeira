@@ -51,6 +51,7 @@ div.entrada-de-dados input {
     color: var(--azul-claro);
     font-weight: bold;
     font-size: 15.4px;
+    border-radius: 0;
 }
 div.entrada-de-dados input:focus {
     border-color: var(--azul-claro);
