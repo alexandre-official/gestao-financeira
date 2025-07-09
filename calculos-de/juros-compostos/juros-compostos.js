@@ -19,6 +19,7 @@ function processarDados() {
     }
     verificarInputs()
     function calcular() {
+        addErro('Tudo certo! <br>Calculando...')
     }
 }
 /*
