@@ -1,7 +1,17 @@
-function verificarInputNum(n, t) {
+function verificarNum(n, t) {
     if(Number(n)) {
         if(Number(n) > 0) {
-            return true
+            let num = String(n).split('.')
+            /*split = dividir. Ele divide o numero a partir do '.' (ponto) e coloca num array e a parte antes do '.' fica no array[0] e a parte depois do '.' fica no array[1]*/
+            if(num.length === 2) {
+                if(num[1].length > 3) {
+                    addErro('Números com mais de três casas decimais não são aceitos!')
+                } else {
+                    return true
+                }
+            } else {
+                return true
+            }
         } else {
             addErro('Números negátivos não são aceitos!')
             return false
