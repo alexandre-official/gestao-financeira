@@ -19,7 +19,36 @@ function processarDados() {
     }
     verificarInputs()
     function calcular() {
-        addErro('Tudo certo! <br>Calculando...')
+        let juros_option = window.document.querySelector('select#juros-option-id').value
+
+        let tempo_investido_option = window.document.querySelector('select#tempo-investido-option-id').value
+        
+        let n = 0
+        if(juros_option === 'ano') {
+            n = 365
+            juros = (juros / n).toFixed(6)
+        } else if(juros_option === 'mes') {
+            n = 30
+            juros = (juros / n).toFixed(6)
+        }
+        p.innerHTML = `${juros}`
+        p.innerHTML += `<br>${(juros * n).toFixed(3)}`
+        let t = 0
+        if(tempo_investido_option === 'ano') {
+            t = 365
+            tempo_investido = tempo_investido * t
+        } else if(tempo_investido_option === 'mes') {
+            t = 30
+            tempo_investido = tempo_investido * t
+        }
+        p.innerHTML += `<br>${tempo_investido}`
+        p.innerHTML += `<br>${tempo_investido / t}`
+
+        let conta = valor_investido
+        for(let c = 0; c < tempo_investido; c++) {
+            conta = conta + (juros * (conta / 100))
+        }
+        p.innerHTML += `<br>Conta: ${conta.toFixed(3)}`
     }
 }
 /*
