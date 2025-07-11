@@ -45,6 +45,7 @@ function processarDados() {
         saida()
     }
 }
+
 function saida() {
     addBlocoDeResposta()
     addH1('Valor investido')
