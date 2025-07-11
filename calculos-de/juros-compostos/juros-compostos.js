@@ -1,12 +1,17 @@
 window.document.querySelector('input[value="Calcular"]').addEventListener('click', processarDados)
 const p = window.document.querySelector('p')
 
+let valor_investido
+let juros
+let tempo_investido
+let juros_option
+let tempo_investido_option
 function processarDados() {
-    let valor_investido = Number(window.document.querySelector('input#valor-investido-id').value)
+    valor_investido = Number(window.document.querySelector('input#valor-investido-id').value)
 
-    let juros = Number(window.document.querySelector('input#juros-id').value)
+    juros = Number(window.document.querySelector('input#juros-id').value)
 
-    let tempo_investido = Number(window.document.querySelector('input#tempo-investido-id').value)
+    tempo_investido = Number(window.document.querySelector('input#tempo-investido-id').value)
 
     function verificarInputs() {
         if(verificarNum(valor_investido, 'Coloque o valor investido!')) {
@@ -19,37 +24,33 @@ function processarDados() {
     }
     verificarInputs()
     function calcular() {
-        let juros_option = window.document.querySelector('select#juros-option-id').value
+        juros_option = window.document.querySelector('select#juros-option-id').value
 
-        let tempo_investido_option = window.document.querySelector('select#tempo-investido-option-id').value
-        
-        let n = 0
+        tempo_investido_option = window.document.querySelector('select#tempo-investido-option-id').value
+
         if(juros_option === 'ano') {
-            n = 365
-            juros = (juros / n).toFixed(6)
+            juros = (juros / 365).toFixed(6)
         } else if(juros_option === 'mes') {
-            n = 30
-            juros = (juros / n).toFixed(6)
+            juros = (juros / 30).toFixed(6)
         }
-        p.innerHTML = `${juros}`
-        p.innerHTML += `<br>${(juros * n).toFixed(3)}`
-        let t = 0
         if(tempo_investido_option === 'ano') {
-            t = 365
-            tempo_investido = tempo_investido * t
+            tempo_investido = tempo_investido * 365
         } else if(tempo_investido_option === 'mes') {
-            t = 30
-            tempo_investido = tempo_investido * t
+            tempo_investido = tempo_investido * 30
         }
-        p.innerHTML += `<br>${tempo_investido}`
-        p.innerHTML += `<br>${tempo_investido / t}`
-
-        let conta = valor_investido
+        let patrimonio = valor_investido
         for(let c = 0; c < tempo_investido; c++) {
-            conta = conta + (juros * (conta / 100))
+            patrimonio = patrimonio + (juros * (patrimonio / 100))
         }
-        p.innerHTML += `<br>Conta: ${conta.toFixed(3)}`
+        saida()
     }
+}
+function saida() {
+    addBlocoDeResposta()
+    addH1('Valor investido')
+    addP(virarMoeda(valor_investido))
+    addH1('Tempo investido')
+    addP(`${tempo_investido} dias`)
 }
 /*
 

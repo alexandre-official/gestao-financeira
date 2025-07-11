@@ -56,27 +56,77 @@ function addErro(t) {
     }
 }
 let bloco_de_resposta
-let bloco_usado = false
 function addBlocoDeResposta() {
-    if(bloco_usado == false) {
-        bloco_usado = true
-        const div = window.document.createElement('div')
-        div.id = 'bloco-de-resposta'
-        window.document.body.appendChild(div)
-        bloco_de_resposta = div
-        function addBotaoRemover() {
-            const input = window.document.createElement('input')
-            input.type = 'button'
-            input.value = 'Remover'
-            input.classList.add('botao')
-            div.appendChild(input)
-            input.addEventListener('click', removerBloco)
-            function removerBloco() {
-                window.document.body.removeChild(div)
-                bloco_usado = false
-            }
-        }
-        addBotaoRemover()
+    const div = window.document.createElement('div')
+    div.id = 'bloco-de-resposta'
+    window.document.body.appendChild(div)
+
+    const input = window.document.createElement('input')
+    input.value = 'Remover'
+    input.type = 'button'
+    input.classList.add('botao')
+    div.appendChild(input)
+
+    input.addEventListener('click', removerResposta)
+    function removerResposta() {
+        window.document.body.removeChild(div)
+    }
+
+    bloco_de_resposta = div
+}
+function addDiv(...e) {
+    const div = window.document.createElement('div')
+    bloco_de_resposta.appendChild(div)
+    e.forEach(element => {
+        div.appendChild(element)
+    })
+}
+function addH1(t, call) {
+    const h1 = window.document.createElement('h1')
+    h1.innerHTML = t
+    if(call && call === 'divCall') {
+        return h1
+    } else {
+        bloco_de_resposta.appendChild(h1)
+    }
+}
+function addH2(t, call) {
+    const h2 = window.document.createElement('h2')
+    h2.innerHTML = t
+    if(call && call === 'divCall') {
+        return h2
+    } else {
+        bloco_de_resposta.appendChild(h2)
+    }
+}
+function addP(t, call) {
+    const p = window.document.createElement('p')
+    p.innerHTML = t
+    if(call && call === 'divCall') {
+        return p
+    } else {
+        bloco_de_resposta.appendChild(p)
+    }
+}
+function virarMoeda(n) {
+    return n.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})
+}
+/*
+const bloco_de_resposta = window.document.createElement('div')
+bloco_de_resposta.id = 'bloco-de-resposta'
+
+function addBlocoDeResposta() {
+    window.document.body.appendChild(bloco_de_resposta)
+}
+function addBotaoRemover() {
+    const input = window.document.createElement('input')
+    input.type = 'button'
+    input.value = 'Remover'
+    input.classList.add('botao')
+    bloco_de_resposta.appendChild(input)
+    input.addEventListener('click', removerBloco)
+    function removerBloco() {
+        window.document.body.removeChild(bloco_de_resposta)
     }
 }
 function addDiv(...a) {
@@ -112,4 +162,4 @@ function addP(t, call) {
     } else {
         bloco_de_resposta.appendChild(p)
     }
-}
+}*/

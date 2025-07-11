@@ -82,12 +82,15 @@ footer {
 }
 #bloco-de-resposta h1 {
     font-size: 21px;
+    color: var(--contraste-escuro);
 }
 #bloco-de-resposta h2 {
     font-size: 19px;
+    color: var(--contraste-claro);
 }
 #bloco-de-resposta p {
     font-size: 17px;
+    color: var(--azul-claro);
 }
 #bloco-de-resposta div {
     padding: 5px;
