@@ -108,6 +108,10 @@ function addP(t, call) {
         bloco_de_resposta.appendChild(p)
     }
 }
+function addBr() {
+    const br = window.document.createElement('br')
+    bloco_de_resposta.appendChild(br)
+}
 function virarMoeda(n) {
     return n.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})
 }

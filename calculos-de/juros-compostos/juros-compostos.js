@@ -2,21 +2,24 @@ window.document.querySelector('input[value="Calcular"]').addEventListener('click
 const p = window.document.querySelector('p')
 
 let valor_investido
-let juros
-let tempo_investido
+let juros_input
 let juros_option
+let juros
+let tempo_investido_input
 let tempo_investido_option
+let tempo_investido
+let patrimonio
 function processarDados() {
     valor_investido = Number(window.document.querySelector('input#valor-investido-id').value)
 
     juros = Number(window.document.querySelector('input#juros-id').value)
 
-    tempo_investido = Number(window.document.querySelector('input#tempo-investido-id').value)
+    tempo_investido_input = Number(window.document.querySelector('input#tempo-investido-id').value)
 
     function verificarInputs() {
         if(verificarNum(valor_investido, 'Coloque o valor investido!')) {
             if(verificarNum(juros, 'Coloque a porcentagem de juros!')) {
-                if(verificarNum(tempo_investido, 'Coloque o tempo investido!')) {
+                if(verificarNum(tempo_investido_input, 'Coloque o tempo investido!')) {
                     calcular()
                 }
             }
@@ -29,16 +32,18 @@ function processarDados() {
         tempo_investido_option = window.document.querySelector('select#tempo-investido-option-id').value
 
         if(juros_option === 'ano') {
-            juros = (juros / 365).toFixed(6)
+            juros_input = (juros / 365).toFixed(6)
         } else if(juros_option === 'mes') {
-            juros = (juros / 30).toFixed(6)
+            juros_input = (juros / 30).toFixed(6)
         }
         if(tempo_investido_option === 'ano') {
-            tempo_investido = tempo_investido * 365
+            tempo_investido = tempo_investido_input * 365
         } else if(tempo_investido_option === 'mes') {
-            tempo_investido = tempo_investido * 30
+            tempo_investido = tempo_investido_input * 30
+        } else {
+            tempo_investido = tempo_investido_input
         }
-        let patrimonio = valor_investido
+        patrimonio = valor_investido
         for(let c = 0; c < tempo_investido; c++) {
             patrimonio = patrimonio + (juros * (patrimonio / 100))
         }
@@ -50,8 +55,41 @@ function saida() {
     addBlocoDeResposta()
     addH1('Valor investido')
     addP(virarMoeda(valor_investido))
-    addH1('Tempo investido')
-    addP(`${tempo_investido} dias`)
+    //DMA dia mes ano
+    let juros_DMA = juros_option
+    if(juros_DMA === 'mes') {
+        juros_DMA = 'mês'
+    }
+    addDiv(
+        addH1(`Juros por ${juros_DMA}`, 'divCall'), 
+        addP(juros, 'divCall')
+    )
+    //DMA dia mes ano
+    let tempo_DMA = tempo_investido_option
+    if(tempo_DMA == 'mes') {
+        if(tempo_investido_input > 1) {
+            tempo_DMA = 'meses'
+        } else {
+            tempo_DMA = 'mês'
+        }
+    } else {
+        if(tempo_investido_input > 1) {
+            tempo_DMA = `${tempo_DMA}s`
+        }
+    }
+    let msg_personalizada
+    if(tempo_investido_option === 'dia') {
+        msg_personalizada = ''
+    } else {
+        msg_personalizada = `ou ${tempo_investido_input} ${tempo_DMA}`
+    }
+    addDiv(
+        addH1('Tempo investido', 'divCall'), 
+        addP(`${tempo_investido} dias ${msg_personalizada}`, 'divCall')
+    )
+    addDiv(
+        addP(patrimonio, 'divCall')
+    )
 }
 /*
 
