@@ -63,24 +63,6 @@ function processar() {
     if(verificarInputs()) {
         addResposta()
     } 
-
-
-
-
-
-
-
-
-//teste
-
-
-
-
-
-
-
-
-
     function calcular() {
         function verificarSelects() {
             if(select_aporte === 'anual') {
