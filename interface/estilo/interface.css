@@ -81,7 +81,7 @@ footer {
 }
 #bloco-de-resposta {
     /*width: 300px;*/
-    width: 95vw;
+    width: 90vw;
     background-color: white;
     text-align: center;
     padding: 7px;
@@ -95,11 +95,11 @@ footer {
     box-shadow: 2px 2px 3px var(--sombra-clara);
 }
 #bloco-de-resposta h1 {
-    font-size: 19px;
+    font-size: 18px;
     color: var(--contraste-escuro);
 }
 #bloco-de-resposta h2 {
-    font-size: 17px;
+    font-size: 16.5px;
     color: var(--contraste-claro);
     /*color: rgb(139, 82, 214);*/
 }
@@ -112,6 +112,8 @@ footer {
     display: inline-block;
     margin: 5px;
     text-align: center;
+    box-shadow: 2px 2px 2px var(--sombra-clara);
+    border: 1px solid var(--azul-escuro);
 }
 #bloco-de-resposta input {
     position: absolute;

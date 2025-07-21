@@ -21,23 +21,26 @@
                 <option value="anual">anual</option>
             </select>
         </div>
-        <input type="number" name="aporte" id="aporte-id" placeholder="Ex: R$ 50" value="50">
+        <input type="number" name="aporte" id="aporte-id" placeholder="Ex: R$ 50" value="60">
     </div>
     <div class="entrada-de-dados">
         <div>
-            <label for="juros-id">Juros por ano</label>
-            <!--
-            <select name="" id="">
-                <option value="ano">ano</option>
-                <option value="mes">mês</option>
-                <option value="dia">dia</option>
+            <label for="juros-id">Juros</label>
+            <select name="select-juros" id="select-juros-id">
+                <option value="anual">anual</option>
+                <option value="mensal">mensal</option>
             </select>
-            -->
         </div>
         <input type="number" name="juros" id="juros-id" placeholder="Ex: 3,5%" value="15">
     </div>
     <div class="entrada-de-dados">
-        <label for="tempo-investido-id">Tempo investido em anos</label>
+        <div>
+            <label for="tempo-investido-id">Tempo investido em</label>
+            <select name="select-tempo-investido" id="select-tempo-investido-id">
+                <option value="anos">anos</option>
+                <option value="meses">meses</option>
+            </select>
+        </div>
         <input type="number" name="tempo-investido" id="tempo-investido-id" placeholder="Ex: 5 anos anos" value="5">
     </div>
     <input class="botao" type="button" value="Calcular">
