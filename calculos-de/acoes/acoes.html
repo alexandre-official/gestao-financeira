@@ -10,8 +10,18 @@
 </head>
 <body>
     <div class="entrada-de-dados">
-        <label for="valor-investido-id">Valor investido</label>
-        <input type="number" name="valor-investido" id="valor-investido-id" placeholder="Ex: R$ 1000.00" value="1000">
+        <label for="investimento-inicial-id">Investimento inicial</label>
+        <input type="number" name="investimento-inicial" id="investimento-inicial-id" placeholder="Ex: R$ 1000" value="1000">
+    </div>
+    <div class="entrada-de-dados">
+        <div>
+            <label for="aporte-id">Aporte</label>
+            <select name="select-aporte" id="select-aporte-id">
+                <option value="mensal">mensal</option>
+                <option value="anual">anual</option>
+            </select>
+        </div>
+        <input type="number" name="aporte" id="aporte-id" placeholder="Ex: R$ 50" value="50">
     </div>
     <div class="entrada-de-dados">
         <div>
