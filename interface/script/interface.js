@@ -57,7 +57,7 @@ function addBlocoDeResposta() {
     window.document.body.appendChild(div)
 
     const input = window.document.createElement('input')
-    input.value = 'Remover'
+    input.value = 'Refazer'
     input.type = 'button'
     input.classList.add('botao')
     div.appendChild(input)
