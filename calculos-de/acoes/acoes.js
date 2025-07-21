@@ -62,7 +62,25 @@ function processar() {
     }
     if(verificarInputs()) {
         addResposta()
-    }
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     function calcular() {
         function verificarSelects() {
             if(select_aporte === 'anual') {
