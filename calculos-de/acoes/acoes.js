@@ -97,30 +97,6 @@ function processar() {
         addBlocoDeResposta()
         addTextoColorido('O site dá valores aproximados. Precisão de até 85%!', 'red')
         addBr()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         addH1('Investimento')
         if(investido_inicial) {
             addDiv(
