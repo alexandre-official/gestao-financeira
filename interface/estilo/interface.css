@@ -31,7 +31,7 @@ div.bloco-de-erro p {
 /*FIM ERRO*/
 /*ENTRADA DE DADOS*/
 div.entrada-de-dados {
-    background-color: var(--azul-claro);
+    background-color: red;
     display: flex;
     flex-direction: column;
     width: 270px;
@@ -82,7 +82,7 @@ footer {
 #bloco-de-resposta {
     /*width: 300px;*/
     width: 85vw;
-    background-color: red;
+    background-color: white;
     text-align: center;
     padding: 7px;
     padding-bottom: 40px;
