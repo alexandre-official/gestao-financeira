@@ -110,6 +110,12 @@ function addBr() {
 function virarMoeda(n) {
     return n.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})
 }
+function addTextoColorido(t, c) {
+    const p = window.document.createElement('p')
+    p.innerHTML = t
+    p.style.color = c
+    bloco_de_resposta.appendChild(p)
+}
 /*
 const bloco_de_resposta = window.document.createElement('div')
 bloco_de_resposta.id = 'bloco-de-resposta'
