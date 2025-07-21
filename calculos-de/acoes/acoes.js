@@ -71,6 +71,7 @@ function processar() {
 
 
 
+//teste
 
 
 
@@ -80,7 +81,6 @@ function processar() {
 
 
 
-    
     function calcular() {
         function verificarSelects() {
             if(select_aporte === 'anual') {
