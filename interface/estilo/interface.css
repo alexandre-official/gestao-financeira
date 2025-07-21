@@ -31,7 +31,7 @@ div.bloco-de-erro p {
 /*FIM ERRO*/
 /*ENTRADA DE DADOS*/
 div.entrada-de-dados {
-    background-color: red;
+    background-color: var(--azul-claro);
     display: flex;
     flex-direction: column;
     width: 270px;
